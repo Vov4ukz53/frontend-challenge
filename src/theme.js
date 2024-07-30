@@ -8,6 +8,9 @@ const theme = {
       veryDarkGrayishBlue: "hsl(235, 19%, 35%)",
       hoverButton: "linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%))",
    },
+   boxShadow: {
+      todoWrapper: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+   },
    breakpoints: {
       tablets: 992,
       mobile: 767,
