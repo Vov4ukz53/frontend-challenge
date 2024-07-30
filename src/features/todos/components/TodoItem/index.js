@@ -8,10 +8,10 @@ const TodoItem = ({ content, done, id }) => {
   return (
     <TodoWrapper>
       <ToggleButton
-        toggleDone={done}
+        toggledone={done ? "true" : undefined}
         onClick={() => dispatch(toggleDoneTodo(id))}
       />
-      <Content done={done}>{ content }</Content>
+      <Content done={done ? "true" : undefined}>{ content }</Content>
       <RemoveButton
         onClick={() => dispatch(removeTodo(id))}
       />

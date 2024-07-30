@@ -37,7 +37,7 @@ export const ToggleButton = styled.button`
     margin-left: 24px;
     cursor: pointer;
 
-    ${({ toggleDone }) => toggleDone && css`
+    ${({ toggledone }) => toggledone && css`
       background: ${({theme}) => theme.colors.hoverButton};
       position: relative;  
         
@@ -58,10 +58,12 @@ export const ToggleButton = styled.button`
 export const Content = styled.p`
     margin: 0;
     padding-right: 15px;
-    max-width: 150px;
+    max-width: 410px;
+    overflow: hidden;
 
     ${({ done }) => done && css`
-      text-decoration: line-through;
+        text-decoration: line-through;
+        color: ${({theme}) => theme.colors.darkGrayishBlue};
    `}
 `;
 
