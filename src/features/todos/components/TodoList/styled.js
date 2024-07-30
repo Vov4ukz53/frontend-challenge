@@ -8,4 +8,5 @@ export const TodosWrapper = styled.ul`
     margin-top: -53px;
     background: ${({theme}) => theme.colors.veryLightGray};
     overflow-y: auto;
+    padding: 0;
 `;
