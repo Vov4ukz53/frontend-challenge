@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Wrapper, Paragraph, ClearCompletedButton } from './styled'
+import { Wrapper, Paragraph, ClearCompletedButton } from './styled';
+import FilterTodos from '../FilterTodos';
 import {
   removeCompletedTodo,
   selectDoneTodos,
   selectUndoneTodos,
-} from '../../todoSlice'
+} from '../../todoSlice';
 
-const TodoListFooter = () => {
+const TodoListFooter = ({ filter, setFilter }) => {
   const dispatch = useDispatch();
   const undoneTodos = useSelector(selectUndoneTodos).length;
   const doneTodos = useSelector(selectDoneTodos).length;
@@ -14,11 +15,7 @@ const TodoListFooter = () => {
   return (
     <Wrapper>
       <Paragraph>{undoneTodos} items left</Paragraph>
-      <div>
-        <button>All</button>
-        <button>Active</button>
-        <button>Completed</button>
-      </div>
+      <FilterTodos filter={filter} setFilter={setFilter}/>
       <ClearCompletedButton
         disabled={doneTodos === 0}
         onClick={() => dispatch(removeCompletedTodo())}

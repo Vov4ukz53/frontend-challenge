@@ -21,6 +21,7 @@ export const ClearCompletedButton = styled.button`
     color: ${({theme}) => theme.colors.darkGrayishBlue};
     cursor: pointer;
     transition: color .3s ease-in;
+    font-weight: 700;
     
     &:disabled {
         cursor: auto;
