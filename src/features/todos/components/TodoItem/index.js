@@ -1,7 +1,13 @@
-const TodoItem = ({content}) => {
+import { TodoWrapper, ToggleButton, RemoveButton, Content } from './styled';
+
+const TodoItem = ({content, done}) => {
 
   return (
-    <li>{content}</li>
+    <TodoWrapper>
+      <ToggleButton toggleDone={done}/>
+      <Content>{content}</Content>
+      <RemoveButton />
+    </TodoWrapper>
   )
 }
 
