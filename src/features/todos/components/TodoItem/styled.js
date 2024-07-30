@@ -59,5 +59,9 @@ export const Content = styled.p`
     margin: 0;
     padding-right: 15px;
     max-width: 150px;
+
+    ${({ done }) => done && css`
+      text-decoration: line-through;
+   `}
 `;
 
