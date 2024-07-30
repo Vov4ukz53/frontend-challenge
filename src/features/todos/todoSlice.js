@@ -18,17 +18,24 @@ const todoSlice = createSlice({
       const index = todo.findIndex(todo => todo.id === todoId);
       todo.splice(index, 1);
     },
+    removeCompletedTodo: (state) => {
+      state.todo = state.todo.filter(todo => !todo.done);
+    },
   },
 });
 
 export const {
   addTodo,
   toggleDoneTodo,
-  removeTodo
+  removeTodo,
+  removeCompletedTodo,
 } = todoSlice.actions;
 
 const selectTodoState = state => state.todo;
 
 export const selectTodo = state => selectTodoState(state).todo;
+
+export const selectUndoneTodos = state => state.todo.todo.filter(todo => !todo.done);
+export const selectDoneTodos = state => state.todo.todo.filter(todo => todo.done);
 
 export default todoSlice.reducer;
