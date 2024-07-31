@@ -1,9 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { getProductsFromLocaleStorage } from './useLocaleStorage';
 
 const todoSlice = createSlice({
   name: 'todo',
   initialState: {
-    todo: [],
+    todo: getProductsFromLocaleStorage(),
   },
   reducers: {
     addTodo: ({ todo }, { payload: newTodo }) => {

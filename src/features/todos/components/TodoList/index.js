@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Reorder } from 'framer-motion';
 import Container from '../../../../common/Container';
+import { TodosWrapper, Wrapper } from './styled';
+import TodoItem from '../TodoItem';
+import TodoListFooter from '../TodoListFooter';
+import { Paragraph } from '../TodoListFooter/styled';
+import FilterTodos from '../FilterTodos';
+import { saveProductsInLocaleStorage } from '../../useLocaleStorage';
 import {
   selectDoneTodos,
   selectTodo,
   selectUndoneTodos,
   updateTodoOrder,
-} from '../../todoSlice'
-import { TodosWrapper, Wrapper } from './styled';
-import TodoItem from '../TodoItem';
-import TodoListFooter from '../TodoListFooter';
-import { Paragraph } from '../TodoListFooter/styled';
-import FilterTodos from '../FilterTodos'
+} from '../../todoSlice';
 
 const TodoList = () => {
   const [filterTodos, setFilterTodos] = useState('all');
@@ -21,6 +22,10 @@ const TodoList = () => {
   const doneTodos = useSelector(selectDoneTodos);
   const unDoneTodos = useSelector(selectUndoneTodos);
   let noTodosAdded = false;
+
+  useEffect(() => {
+    saveProductsInLocaleStorage(todos);
+  }, [todos]);
 
   const handleReorder = (newOrder) => {
     dispatch(updateTodoOrder(newOrder));
