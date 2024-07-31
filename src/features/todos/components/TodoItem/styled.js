@@ -19,7 +19,8 @@ export const RemoveButton = styled.button`
     }
 `;
 
-export const TodoWrapper = styled.li`
+export const TodoWrapper = styled.div`
+    cursor: grab;
     height: 65px;
     display: grid;
     grid-template-columns: 70px 1fr 50px;

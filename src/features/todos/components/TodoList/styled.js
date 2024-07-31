@@ -15,9 +15,14 @@ export const Wrapper = styled.div`
         height: 370px;
         max-height: 370px;
     }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+    }
 `;
 
-export const TodosWrapper = styled.ul`
+export const TodosWrapper = styled.div`
     overflow-y: auto;
     padding: 0;
     margin: 0;

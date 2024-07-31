@@ -4,7 +4,6 @@ const todoSlice = createSlice({
   name: 'todo',
   initialState: {
     todo: [],
-    hideDone: false,
   },
   reducers: {
     addTodo: ({ todo }, { payload: newTodo }) => {
@@ -21,6 +20,9 @@ const todoSlice = createSlice({
     removeCompletedTodo: (state) => {
       state.todo = state.todo.filter(todo => !todo.done);
     },
+    updateTodoOrder: (state, { payload: newOrder }) => {
+      state.todo = newOrder;
+    },
   },
 });
 
@@ -29,6 +31,7 @@ export const {
   toggleDoneTodo,
   removeTodo,
   removeCompletedTodo,
+  updateTodoOrder,
 } = todoSlice.actions;
 
 const selectTodoState = state => state.todo;

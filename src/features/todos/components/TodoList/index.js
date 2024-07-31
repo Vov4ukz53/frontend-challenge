@@ -1,7 +1,13 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Reorder } from 'framer-motion';
 import Container from '../../../../common/Container';
-import { selectDoneTodos, selectTodo, selectUndoneTodos } from '../../todoSlice';
+import {
+  selectDoneTodos,
+  selectTodo,
+  selectUndoneTodos,
+  updateTodoOrder,
+} from '../../todoSlice'
 import { TodosWrapper, Wrapper } from './styled';
 import TodoItem from '../TodoItem';
 import TodoListFooter from '../TodoListFooter';
@@ -10,10 +16,15 @@ import FilterTodos from '../FilterTodos'
 
 const TodoList = () => {
   const [filterTodos, setFilterTodos] = useState('all');
+  const dispatch = useDispatch();
   const todos = useSelector(selectTodo);
   const doneTodos = useSelector(selectDoneTodos);
   const unDoneTodos = useSelector(selectUndoneTodos);
   let noTodosAdded = false;
+
+  const handleReorder = (newOrder) => {
+    dispatch(updateTodoOrder(newOrder));
+  };
 
   const filteredTodos = filterTodos === 'all'
     ? todos
@@ -30,10 +41,14 @@ const TodoList = () => {
       <Container>
         <Wrapper>
           <TodosWrapper>
-            {noTodosAdded && <Paragraph>No tasks added, add some...</Paragraph>}
-            {filteredTodos.map(todo =>
-              <TodoItem {...todo} key={todo.id}/>
-            )}
+            <Reorder.Group axis="y" onReorder={handleReorder} values={todos}>
+              {noTodosAdded && <Paragraph>No tasks added, add some...</Paragraph>}
+              {filteredTodos.map(todo =>
+                <Reorder.Item key={todo.id} value={todo}>
+                  <TodoItem {...todo} />
+                </Reorder.Item>
+              )}
+            </Reorder.Group>
           </TodosWrapper>
           <TodoListFooter filter={filterTodos} setFilter={setFilterTodos} />
         </Wrapper>
