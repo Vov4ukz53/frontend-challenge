@@ -5,11 +5,16 @@ export const FooterWrapper = styled.footer`
     font-size: 14px;
     color: ${({theme}) => theme.colors.darkGrayishBlue};
     margin-top: 30px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        margin-top: 15px;
+    }
 `;
 
 export const FooterText = styled.p`
     margin: 0;
     padding: 20px;
+    letter-spacing: 1.2px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         font-size: 12px;
