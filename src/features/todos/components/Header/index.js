@@ -1,7 +1,7 @@
 import Container from '../../../../common/Container';
 import Form from '../Form';
-import { ReactComponent as MoonIcon } from './images/icon-moon.svg';
-import { HeaderWrapper, TitleWrapper, Title } from './styled';
+
+import { HeaderWrapper, TitleWrapper, Title, StyledMoonIcon } from './styled';
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
       <Container>
         <TitleWrapper>
           <Title>Todo</Title>
-          <MoonIcon />
+          <StyledMoonIcon />
         </TitleWrapper>
         <Form />
       </Container>

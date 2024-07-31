@@ -15,7 +15,8 @@ const TodoListFooter = ({ filter, setFilter }) => {
   return (
     <Wrapper>
       <Paragraph>{undoneTodos} items left</Paragraph>
-      <FilterTodos filter={filter} setFilter={setFilter}/>
+      <FilterTodos desktop="true" filter={filter} setFilter={setFilter}/>
+      {/*<FilterTodos mobile="true" filter={filter} setFilter={setFilter}/>*/}
       <ClearCompletedButton
         disabled={doneTodos === 0}
         onClick={() => dispatch(removeCompletedTodo())}

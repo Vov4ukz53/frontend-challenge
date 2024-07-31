@@ -1,9 +1,9 @@
 import { ButtonWrapper, Button } from './styled';
 
-const FilterTodos = ({filter, setFilter}) => {
+const FilterTodos = ({filter, setFilter, desktop, mobile}) => {
 
   return (
-    <ButtonWrapper>
+    <ButtonWrapper desktop={desktop} mobile={mobile}>
       <Button
         onClick={() => setFilter('all')}
         active={filter === 'all' ? "true" : undefined}

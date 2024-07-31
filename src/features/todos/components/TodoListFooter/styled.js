@@ -9,10 +9,19 @@ export const Wrapper = styled.div`
     margin-top: auto;
     font-size: 14px;
     color: ${({theme}) => theme.colors.darkGrayishBlue};
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        grid-template-columns: 1fr 1fr;
+        font-size: 12px;
+    }
 `;
 
 export const Paragraph = styled.p`
     margin-left: 24px;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        font-size: 12px;
+    }
 `;
 
 export const ClearCompletedButton = styled.button`
@@ -33,5 +42,10 @@ export const ClearCompletedButton = styled.button`
 
     &:hover {
         color: ${({theme}) => theme.colors.veryDarkGrayishBlue};
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        padding-right: 19px;
+        margin-left: auto;
     }
 `;

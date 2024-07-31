@@ -11,6 +11,12 @@ export const Input = styled.input`
     border: none;
     padding: 0 73px;
     color: ${({theme}) => theme.colors.darkGrayishBlue};
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        height: 49px;
+        font-size: 12px;
+        padding: 0 50px;
+    }
 `;
 
 export const Button = styled.button`
@@ -25,13 +31,30 @@ export const Button = styled.button`
     left: 24px;
     overflow: hidden;
     cursor: pointer;
-    transition: border, scale .3s ease;
+    transition: all .3s ease;
     
-    &:hover {
-        border: 1px solid ${({theme}) => theme.colors.veryDarkGrayishBlue};
+    &:hover:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid hsl(192, 100%, 67%);
+        border-bottom: 1px solid hsl(280, 87%, 65%);
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s ease;
     }
     
     &:active {
         scale: 0.8;
+        background: ${({theme}) => theme.colors.hoverButton};
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        top: 15px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
     }
 `;

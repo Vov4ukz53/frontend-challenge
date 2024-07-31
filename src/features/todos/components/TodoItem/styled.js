@@ -12,6 +12,11 @@ export const RemoveButton = styled.button`
     width: 20px;
     height: 20px;
     border: none;
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        scale: 1;
+        margin-left: 7px;
+    }
 `;
 
 export const TodoWrapper = styled.li`
@@ -26,6 +31,12 @@ export const TodoWrapper = styled.li`
             scale: 1;
         }
     }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        height: 55px;
+        font-size: 12px;
+        grid-template-columns: 50px 1fr 35px;
+    }
 `;
 
 export const ToggleButton = styled.button`
@@ -36,6 +47,23 @@ export const ToggleButton = styled.button`
     background: none;
     margin-left: 24px;
     cursor: pointer;
+    position: relative;
+    
+    &:hover:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid hsl(192, 100%, 67%);
+        border-bottom: 1px solid hsl(280, 87%, 65%); 
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    &:hover {
+        
+    }
 
     ${({ toggledone }) => toggledone && css`
       background: ${({theme}) => theme.colors.hoverButton};
@@ -51,8 +79,18 @@ export const ToggleButton = styled.button`
             top: 0;
             left: 0;
             position: absolute;
+
+            @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+                background-position: 45% 5px;
+            }
         }
-   `}
+   `};
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+        margin-left: 20px;
+        width: 20px;
+        height: 20px;
+    }
 `;
 
 export const Content = styled.p`
