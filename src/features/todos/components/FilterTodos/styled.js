@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const ButtonWrapper = styled.div`
-    margin-left: 40px;
+    margin-left: 34px;
 
     ${({ desktop }) => desktop && css`
         @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
@@ -47,6 +47,6 @@ export const Button = styled.button`
    `};
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        font-size: 12px;
+        font-size: 14px;
     }
 `;

@@ -14,7 +14,6 @@ export const FooterWrapper = styled.footer`
 export const FooterText = styled.p`
     margin: 0;
     padding: 20px;
-    letter-spacing: 1.2px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         font-size: 12px;
