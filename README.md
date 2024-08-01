@@ -15,7 +15,7 @@ You can also see the number of uncompleted todos.
 
 ![uncompleted todos](https://i.ibb.co/yQ5hjgQ/uncompleted-todos.jpg)
 
-Here you can see the "Clear completed" button, which removes all completed tasks from the list.
+Here you can see the "Clear completed" button, which removes all completed tasks from the list, but note that if you haven't completed any todos, this button will not be disabled.
 
 ![clear uncompleted todos](https://i.ibb.co/jk11SLy/clear-completed-todos.jpg)
 
