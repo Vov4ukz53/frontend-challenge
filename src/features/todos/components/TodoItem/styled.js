@@ -9,6 +9,7 @@ export const RemoveButton = styled.button`
     background-image: url("${iconRemove}");
     background-repeat: no-repeat;
     background-color: transparent;
+    background-position: center;
     width: 20px;
     height: 20px;
     border: none;
@@ -16,12 +17,14 @@ export const RemoveButton = styled.button`
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         scale: 1;
         margin-left: 7px;
+        width: 12px;
+        height: 11px;
     }
 `;
 
 export const TodoWrapper = styled.div`
     cursor: grab;
-    height: 65px;
+    height: 63px;
     display: grid;
     grid-template-columns: 70px 1fr 50px;
     align-items: center;

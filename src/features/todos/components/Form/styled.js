@@ -43,7 +43,6 @@ export const Button = styled.button`
         position: absolute;
         top: 0;
         left: 0;
-        transition: all .3s ease;
     }
     
     &:active {

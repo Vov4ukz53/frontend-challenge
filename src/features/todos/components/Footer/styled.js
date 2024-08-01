@@ -7,7 +7,7 @@ export const FooterWrapper = styled.footer`
     margin-top: 30px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        margin-top: 15px;
+        margin-top: 20px;
     }
 `;
 
@@ -16,6 +16,6 @@ export const FooterText = styled.p`
     padding: 20px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        font-size: 12px;
+        font-size: 14px;
     }
 `;

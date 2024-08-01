@@ -22,8 +22,8 @@ export const TitleWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 73px;
-    margin-bottom: 42px;
+    padding-top: 76px;
+    margin-bottom: 38px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         padding-top: 45px;
@@ -44,6 +44,8 @@ export const Title = styled.h1`
 `;
 
 export const StyledMoonIcon = styled(MoonIcon)`
+    margin-top: -5px;
+    
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         scale: 0.8;
     }

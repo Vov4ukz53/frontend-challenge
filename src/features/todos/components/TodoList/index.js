@@ -49,9 +49,13 @@ const TodoList = () => {
             <Reorder.Group axis="y" onReorder={handleReorder} values={todos}>
               {noTodosAdded && <Paragraph>No tasks added, add some...</Paragraph>}
               {filteredTodos.map(todo =>
-                <Reorder.Item key={todo.id} value={todo}>
+                <Reorder.Item
+                  key={todo.id}
+                  value={todo}
+                  whileDrag={{boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'}}
+                >
                   <TodoItem {...todo} />
-                </Reorder.Item>
+                </Reorder.Item >
               )}
             </Reorder.Group>
           </TodosWrapper>

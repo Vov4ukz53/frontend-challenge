@@ -19,6 +19,11 @@ export const Wrapper = styled.div`
     ul {
         margin: 0;
         padding: 0;
+        height: 372px;
+
+        @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
+            height: 308px;
+        }
     }
 `;
 
