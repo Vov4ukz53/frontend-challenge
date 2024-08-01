@@ -17,10 +17,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Paragraph = styled.p`
-    margin-left: 24px;
+    margin-left: 23px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         font-size: 12px;
+        margin-left: 20px;
     }
 `;
 

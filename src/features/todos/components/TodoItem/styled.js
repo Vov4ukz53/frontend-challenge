@@ -16,7 +16,7 @@ export const RemoveButton = styled.button`
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         scale: 1;
-        margin-left: 7px;
+        margin-left: 5px;
         width: 12px;
         height: 11px;
     }
@@ -37,7 +37,7 @@ export const TodoWrapper = styled.div`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        height: 55px;
+        height: 53px;
         font-size: 12px;
         grid-template-columns: 50px 1fr 35px;
     }

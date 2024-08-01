@@ -9,13 +9,23 @@ export const Input = styled.input`
     height: 65px;
     border-radius: 5px;
     border: none;
-    padding: 0 73px;
+    padding: 2px 72px 0 72px;
     color: ${({theme}) => theme.colors.darkGrayishBlue};
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    letter-spacing: 0.2px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        height: 49px;
+        height: 48px;
         font-size: 12px;
         padding: 0 50px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.small}px){
+        max-width: 326px;
+        letter-spacing: 0;
+        padding: 0 50px 0 51px;
     }
 `;
 
@@ -51,7 +61,7 @@ export const Button = styled.button`
     }
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        top: 15px;
+        top: 13px;
         left: 20px;
         width: 20px;
         height: 20px;

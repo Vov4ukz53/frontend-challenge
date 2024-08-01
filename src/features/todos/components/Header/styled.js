@@ -29,17 +29,22 @@ export const TitleWrapper = styled.div`
         padding-top: 45px;
         margin-bottom: 35px;
     }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.small}px){
+        margin-bottom: 32px;
+    }
 `;
 
 export const Title = styled.h1`
     margin: 0;
     text-transform: uppercase;
-    letter-spacing: 0.45em;
+    letter-spacing: 0.43em;
     color: ${({theme}) => theme.colors.veryLightGray};
     font-size: 38px;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         font-size: 26px;
+        letter-spacing: 0.4em;
     }
 `;
 
@@ -48,5 +53,9 @@ export const StyledMoonIcon = styled(MoonIcon)`
     
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         scale: 0.8;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.small}px){
+        margin-right: 15px;
     }
 `;

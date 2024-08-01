@@ -11,9 +11,13 @@ export const Wrapper = styled.div`
     flex-direction: column;
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
-        margin-top: -28px;
-        height: 370px;
+        margin-top: -30px;
+        height: 367px;
         max-height: 370px;
+    }
+
+    @media(max-width: ${({ theme }) => theme.breakpoints.small}px){
+        max-width: 326px;
     }
     
     ul {

@@ -14,6 +14,7 @@ const theme = {
    breakpoints: {
       tablets: 992,
       mobile: 767,
+      small: 420,
    },
    containers: {
       main: 570

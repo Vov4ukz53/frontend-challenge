@@ -26,6 +26,11 @@ export const ButtonWrapper = styled.div`
         @media(min-width: ${({ theme }) => theme.breakpoints.mobile}px){
             display: none;
         }
+
+        @media(max-width: ${({ theme }) => theme.breakpoints.small}px){
+            max-width: 326px;
+            padding: 2px 0 0 1px;
+        }
     `}
 `;
 
@@ -48,5 +53,6 @@ export const Button = styled.button`
 
     @media(max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         font-size: 14px;
+        margin: 0 3px;
     }
 `;
