@@ -27,7 +27,10 @@ Drag and drop to reorder list if you need.
 
 ![drag and drop todos](https://i.ibb.co/4Mz9hFC/drag-and-drop-todos.jpg)
 
-# Getting Started with Create React App
+## How to use
+![how to use](https://i.ibb.co/FgGkkzz/Video-240801134204.gif)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
